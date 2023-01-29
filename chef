@@ -1,0 +1,66 @@
+#ifndef CHEF_H
+#define CHEF_H
+#include <iostream>
+using namespace std;
+
+
+class Chef
+{
+public:
+    Chef();
+    ~Chef();
+    void Chef1(string);
+    void makeSalad(string);
+    void makeSoup(string);
+
+};
+
+#endif // CHEF_H
+
+#include "chef.h"
+
+Chef::Chef()
+{
+    Chef::Chef1("");
+    cout << "konstruktori"  <<endl;
+    Chef::Chef1 ("") ;
+    Chef::makeSalad("");
+    cout<<endl;
+    Chef::Chef1("");
+    Chef::makeSoup("");
+
+
+}
+
+Chef::~Chef()
+{
+    Chef::Chef1("");
+    cout << "destruktori";
+
+}
+
+void Chef::Chef1(string)
+{
+    cout << "Chef Gordon Ramsay ";
+}
+
+
+void Chef::makeSalad(string)
+{
+    cout << "makes salad";
+}
+
+void Chef::makeSoup(string)
+{
+    cout << "makes soup"<<endl;
+}
+
+#include "chef.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    Chef obj3;
+    return 0;
+}
