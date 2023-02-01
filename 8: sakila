@@ -1,0 +1,29 @@
+
+a)  
+
+
+
+
+b) 
+mysql> SELECT film.title
+    -> FROM film
+    -> INNER JOIN film_actor ON film.film_id = film_actor.film_id
+    -> INNER JOIN actor ON film_actor.actor_id = actor.actor_id
+    -> WHERE actor.last_name = 'Temple';
+    
+c) 
+mysql> SELECT DISTINCT language.name
+    -> FROM language
+    -> INNER JOIN film ON language.language_id = film.language_id;
+    
+d) mysql> SELECT COUNT(film.film_id)
+    -> FROM film
+    -> INNER JOIN film_category ON film.film_id = film_category.film_id
+    -> INNER JOIN category ON film_category.category_id = category.category_id
+    -> WHERE category.name = '
+    
+e) mysql> SELECT film.title
+    -> FROM film
+    -> INNER JOIN film_category ON film.film_id = film_category.film_id
+    -> INNER JOIN category ON film_category.category_id = category.category_id
+    -> WHERE category.name = 'Horror';
