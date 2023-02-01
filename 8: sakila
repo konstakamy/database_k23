@@ -1,9 +1,28 @@
+5. 
+a) mysql> SELECT COUNT(*)
+    -> FROM departments;
+    b) mysql> SELECT COUNT(DISTINCT title)
+    -> FROM titles;
+    c) SELECT MIN(avg_salary) AS min_avg_salary, MAX(avg_salary) AS max_avg_salary
+FROM (
+  SELECT AVG(salary) AS avg_salary
+  FROM employees
+  GROUP BY dept_no
+) subq;
+    e)mysql> SELECT *
+    -> FROM employees
+    -> WHERE first_name = 'Facello';
+    f)SELECT COUNT(*) AS num_employees
+FROM employees
+WHERE birth_date BETWEEN '1950-01-01' AND '1959-12-31';
+    g) SELECT gender, COUNT(*) AS num_employees
+FROM employees
+GROUP BY gender;
+6.
+7.
 
+8.
 a)  
-
-
-
-
 b) 
 mysql> SELECT film.title
     -> FROM film
